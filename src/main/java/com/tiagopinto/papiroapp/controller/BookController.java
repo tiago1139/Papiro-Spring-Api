@@ -67,7 +67,7 @@ public class BookController {
 
                 File f = new File(String.valueOf(path));
 
-                String imageUrl = "http://localhost:8080/api/images"+File.separator
+                String imageUrl = "http://papiro-spring-api.herokuapp.com/api/images"+File.separator
                         +String.valueOf(rows+1)+"_cover.jpg";
 
                 b.setCover(imageUrl);
