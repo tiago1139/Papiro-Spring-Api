@@ -16,7 +16,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
-@CrossOrigin(origins= "https://tiago1139.github.io/Papiro-Angular")
+@CrossOrigin(origins= "https://tiago1139.github.io")
 public class UserController {
 
     private UserRepository userRepository;
