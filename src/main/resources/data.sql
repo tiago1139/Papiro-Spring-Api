@@ -11,6 +11,16 @@ INSERT INTO book ( title, author, cover) VALUES ( 'Mensagem', 'Fernando Pessoa',
 INSERT INTO book ( title, author, cover) VALUES ( 'Odisseia', 'Homero', 'https://papiro-spring-api.herokuapp.com/api/images/11_cover.jpg')
 INSERT INTO book ( title, author, cover) VALUES ( 'Os Maias', 'Eça de Queirós', 'https://papiro-spring-api.herokuapp.com/api/images/12_cover.jpg')
 INSERT INTO book ( title, author, cover) VALUES ( 'Sonetos', 'Luís de Camões', 'https://papiro-spring-api.herokuapp.com/api/images/13_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Anatomia Humana I', 'Esperança Pina', 'https://papiro-spring-api.herokuapp.com/api/images/14_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Anatomia Humana II', 'Esperança Pina', 'https://papiro-spring-api.herokuapp.com/api/images/15_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Anatomia Humana III', 'Esperança Pina', 'https://papiro-spring-api.herokuapp.com/api/images/16_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Observar o Céu Profundo', 'Guilherme de Almeida, Pedro Ré', 'https://papiro-spring-api.herokuapp.com/api/images/17_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Sete Breves Lições de Física', 'Carlo Rovelli', 'https://papiro-spring-api.herokuapp.com/api/images/18_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Oxford - Dictionary of Chemistry', 'Oxford', 'https://papiro-spring-api.herokuapp.com/api/images/19_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'As invasões biológicas em Portugal', 'Arte e Ciência', 'https://papiro-spring-api.herokuapp.com/api/images/20_cover.jpg')
+INSERT INTO book ( title, author, cover) VALUES ( 'Introdução à Engenharia de Software', 'Sérgio Guerreiro', 'https://papiro-spring-api.herokuapp.com/api/images/21_cover.jpg')
+
+
 
 
 INSERT INTO users ( username, password, firstname, lastname) VALUES ( 'admin', 'admin123', 'Admin', 'Admin')
