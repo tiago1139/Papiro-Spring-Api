@@ -33,3 +33,13 @@ INSERT INTO users ( username, password, firstname, lastname) VALUES ( 'user7', '
 INSERT INTO users ( username, password, firstname, lastname) VALUES ( 'user8', '123', 'Tiago', 'Pinto')
 INSERT INTO users ( username, password, firstname, lastname) VALUES ( 'user9', '123', 'Tiago', 'Pinto')
 INSERT INTO users ( username, password, firstname, lastname) VALUES ( 'user10', '123', 'Tiago', 'Pinto')
+
+
+INSERT INTO category (name) VALUES ('Ciencias')
+INSERT INTO category (name) VALUES ('Filosofia')
+INSERT INTO category (name) VALUES ('História')
+INSERT INTO category (name) VALUES ('Informática')
+INSERT INTO category (name) VALUES ('Literatura')
+INSERT INTO category (name) VALUES ('Medicina')
+INSERT INTO category (name) VALUES ('Religião')
+INSERT INTO category (name) VALUES ('Outros')

@@ -1,8 +1,11 @@
 package com.tiagopinto.papiroapp.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -29,10 +32,6 @@ public class Book {
     @JsonProperty("isbn")
     @Column
     private String isbn;
-
-    @JsonProperty("categories")
-    @Column
-    private String[] categories;
 
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)

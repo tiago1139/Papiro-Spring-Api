@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tiagopinto.papiroapp.exceptions.ResourceNotFoundException;
 import com.tiagopinto.papiroapp.model.Book;
+import com.tiagopinto.papiroapp.model.Category;
 import com.tiagopinto.papiroapp.repository.BookRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,9 @@ import java.util.Optional;
 //@CrossOrigin("http://localhost:4200")
 @CrossOrigin(origins= "https://tiago1139.github.io")
 public class BookController {
+
+    private static String coverUrl = "https://papiro-spring-api.herokuapp.com/api/images/";
+    //private static String coverUrl = "http://localhost:8080/api/images/";
 
     private static String imagePath = Paths.get("src/main/resources/images").toAbsolutePath().toString();
     private BookRepository bookRepository;
@@ -68,10 +72,10 @@ public class BookController {
 
                 File f = new File(String.valueOf(path));
 
-                String imageUrl = "https://papiro-spring-api.herokuapp.com/api/images"+File.separator
-                        +String.valueOf(rows+1)+"_cover.jpg";
+                String imageUrl = coverUrl+String.valueOf(rows+1)+"_cover.jpg";
 
                 b.setCover(imageUrl);
+                System.out.println(b.getCover());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -80,6 +84,8 @@ public class BookController {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(bookRepository.save(b));
     }
+
+    
     @PutMapping("/book/{id}")
     public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody Book book) throws ResourceNotFoundException {
 
