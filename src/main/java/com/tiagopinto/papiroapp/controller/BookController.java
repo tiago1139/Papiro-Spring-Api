@@ -22,12 +22,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
-//@CrossOrigin("http://localhost:4200")
-@CrossOrigin(origins= "https://tiago1139.github.io")
+@CrossOrigin("http://localhost:4200")
+//@CrossOrigin(origins= "https://tiago1139.github.io")
 public class BookController {
 
-    private static String coverUrl = "https://papiro-spring-api.herokuapp.com/api/images/";
-    //private static String coverUrl = "http://localhost:8080/api/images/";
+    //private static String coverUrl = "https://papiro-spring-api.herokuapp.com/api/images/";
+    private static String coverUrl = "http://localhost:8080/api/images/";
 
     private static String imagePath = Paths.get("src/main/resources/images").toAbsolutePath().toString();
     private BookRepository bookRepository;

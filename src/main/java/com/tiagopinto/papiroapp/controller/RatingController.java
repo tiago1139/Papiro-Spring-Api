@@ -19,8 +19,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
-//@CrossOrigin("http://localhost:4200")
-@CrossOrigin(origins= "https://tiago1139.github.io")
+@CrossOrigin("http://localhost:4200")
+//@CrossOrigin(origins= "https://tiago1139.github.io")
 public class RatingController {
 
     private RatingRepository ratingRepository;

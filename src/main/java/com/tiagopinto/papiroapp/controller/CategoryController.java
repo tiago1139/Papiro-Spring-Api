@@ -26,8 +26,8 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
-//@CrossOrigin("http://localhost:4200")
-@CrossOrigin(origins= "https://tiago1139.github.io")
+@CrossOrigin("http://localhost:4200")
+//@CrossOrigin(origins= "https://tiago1139.github.io")
 public class CategoryController {
 
     private CategoryRepository catRepository;
