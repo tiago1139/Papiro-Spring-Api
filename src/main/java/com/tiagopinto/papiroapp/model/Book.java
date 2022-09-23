@@ -30,7 +30,7 @@ public class Book {
     private String author;
 
     @JsonProperty("isbn")
-    @Column
+    @Column(columnDefinition = "varchar(20) default '12345'")
     private String isbn;
 
 
