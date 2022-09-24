@@ -7,7 +7,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -37,4 +39,10 @@ public class User {
 
     @Column
     private String email;
+
+    @ManyToMany
+    @JoinTable(name = "user_favorites",
+        joinColumns = { @JoinColumn(name = "fk_user") },
+        inverseJoinColumns = { @JoinColumn(name = "fk_book") })
+    private Set<Book> favorites = new HashSet<Book>();
 }

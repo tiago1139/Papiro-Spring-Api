@@ -44,14 +44,14 @@ public class UserController {
                 .body(userRepository.save(user));
     }
 
-    @PutMapping("/users/{id}")
+    @PutMapping("/users/id/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) throws ResourceNotFoundException {
 
         return ResponseEntity.status(HttpStatus.OK)
                 .body(userRepository.save(user));
     }
 
-    @DeleteMapping("/users/{id}")
+    @DeleteMapping("/users/id/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
 
         userRepository.deleteById(id);

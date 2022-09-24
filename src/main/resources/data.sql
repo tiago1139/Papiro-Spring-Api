@@ -42,3 +42,34 @@ INSERT INTO category (name) VALUES ('Literatura')
 INSERT INTO category (name) VALUES ('Medicina')
 INSERT INTO category (name) VALUES ('Religião')
 INSERT INTO category (name) VALUES ('Outros')
+
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 14)
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 15)
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 16)
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 17)
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 18)
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 19)
+INSERT INTO book_category (fk_category, fk_book) VALUES (1, 20)
+
+INSERT INTO book_category (fk_category, fk_book) VALUES (3, 5)
+INSERT INTO book_category (fk_category, fk_book) VALUES (3, 6)
+
+INSERT INTO book_category (fk_category, fk_book) VALUES (4, 21)
+
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 1)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 2)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 3)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 4)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 8)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 9)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 10)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 11)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 12)
+INSERT INTO book_category (fk_category, fk_book) VALUES (5, 13)
+
+INSERT INTO book_category (fk_category, fk_book) VALUES (6, 14)
+INSERT INTO book_category (fk_category, fk_book) VALUES (6, 15)
+INSERT INTO book_category (fk_category, fk_book) VALUES (6, 16)
+
+INSERT INTO book_category (fk_category, fk_book) VALUES (7, 7)
+
