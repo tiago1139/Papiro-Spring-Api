@@ -57,7 +57,7 @@ public class RatingController {
                 .body(ratingRepository.save(rating));
     }
 
-    @DeleteMapping("/rating/{id}")
+    @DeleteMapping("/rating/user/{userId}/book/{bookId}")
     public ResponseEntity<Void> deleteRating(@PathVariable Long id) {
 
         ratingRepository.deleteById(id);
