@@ -29,6 +29,11 @@ public class RatingController {
     public List<Rating> getRatings() {
         return ratingRepository.findAll();
     }
+    
+    @GetMapping("/rating/{id}")
+    public Optional<Rating> getRatingById(@PathVariable Long id) {
+        return ratingRepository.findById(id);
+    }
 
     @GetMapping("/ratings/book/{bookId}")
     public List<Rating> getRatingsByBook(@PathVariable Long bookId) {
@@ -57,7 +62,7 @@ public class RatingController {
                 .body(ratingRepository.save(rating));
     }
 
-    @DeleteMapping("/rating/user/{userId}/book/{bookId}")
+    @DeleteMapping("/rating/{id}")
     public ResponseEntity<Void> deleteRating(@PathVariable Long id) {
 
         ratingRepository.deleteById(id);
