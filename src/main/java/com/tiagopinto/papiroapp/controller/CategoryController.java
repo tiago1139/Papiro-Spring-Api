@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,11 +27,11 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
+@RequiredArgsConstructor
 //@CrossOrigin("http://localhost:4200")
-@CrossOrigin(origins= "https://tiago1139.github.io")
+@CrossOrigin(origins= {"${origin}"})
 public class CategoryController {
-
+    @Autowired
     private CategoryRepository catRepository;
 
     @GetMapping("/categories")

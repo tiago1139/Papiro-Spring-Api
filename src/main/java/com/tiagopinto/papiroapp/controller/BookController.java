@@ -7,6 +7,10 @@ import com.tiagopinto.papiroapp.model.Book;
 import com.tiagopinto.papiroapp.model.Category;
 import com.tiagopinto.papiroapp.repository.BookRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,16 +25,20 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
+@RequiredArgsConstructor
 //@CrossOrigin("http://localhost:4200")
-@CrossOrigin(origins= "https://tiago1139.github.io")
+@CrossOrigin(origins= {"${origin}"})
 public class BookController {
 
-    private static String coverUrl = "https://papiro-spring-api.herokuapp.com/api/images/";
+    @Value("${images}")
+    private String coverUrl;
     //private static String coverUrl = "http://localhost:8080/api/images/";
 
     private static String imagePath = Paths.get("src/main/resources/images").toAbsolutePath().toString();
+
+    @Autowired
     private BookRepository bookRepository;
+
 
     @GetMapping("/books")
     public List<Book> getAll() {

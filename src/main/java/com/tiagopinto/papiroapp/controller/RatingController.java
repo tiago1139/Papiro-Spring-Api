@@ -6,6 +6,8 @@ import com.tiagopinto.papiroapp.model.Rating;
 import com.tiagopinto.papiroapp.repository.RatingRepository;
 import com.tiagopinto.papiroapp.repository.UserRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +20,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
+@RequiredArgsConstructor
 //@CrossOrigin("http://localhost:4200")
-@CrossOrigin(origins= "https://tiago1139.github.io")
+@CrossOrigin(origins= {"${origin}"})
 public class RatingController {
-
+    @Autowired
     private RatingRepository ratingRepository;
 
     @GetMapping("/ratings")
